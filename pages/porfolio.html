@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=".././favicon.ico">
+    <link href=".././lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=".././lib/fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href=".././lib/anime-css/animate.min.css"/>
+    <link rel="stylesheet" href=".././css/home.css">
+    <link rel="stylesheet" href=".././css/porfolio.css">
+    <title>Daily Flow</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand fs-4" href="../index.html">
+                  <img 
+                      class="header-logo"
+                      src=".././assets/img/weblogo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <div class="menu-btn">
+                  </div>
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="container wrapper">
+        <div class="main-session row align-items-center justify-content-evenly">
+            <div class="info col-12 col-sm-12 col-md-4 text-center">
+                <img    src=".././assets/img/my_avatar.jpg"
+                        alt="Avatar"
+                        class="info-avatar"
+                        >
+                <div class="info-detail mt-3">
+                    <div class="name">
+                        PHAN NGUYEN NHAT TRUONG
+                    </div>
+                    <div id="age" class="age">
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> 日本、東京都
+                    </div>
+                </div>
+            </div>
+            <div class="description col-12 col-sm-12 col-md-8">
+                <div class="description-header fs-1">
+                    こんにちは、<br>
+                    私は チュオン<br>
+                    フロントエンドエンジニア
+                </div>
+                <p class="description-text fs-5">
+                    私は今留学生として、早稲田文理専門学校でITの知識を習得して、<br>ウェブ・アプリ制作専攻しています。<br>
+                    勉強したことを応用して、このページを制作しました。<br>
+                    どうぞ、ゆっくりご覧ください。
+                </p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a class="social-icons__link"
+                href="https://www.facebook.com/truong.phannguyennhat"><i class="fab fa-facebook"></i></a>
+            <a class="social-icons__link"
+                href="https://github.com/pnntruong"><i class="fab fa-github"></i></a>
+            <a class="social-icons__link"
+                href="mailto:pnntruong@gmail.com" title="pnntruong@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <!-- <div class="arrow">
+
+        </div> -->
+    </div>
+
+    <footer class="bg-light text-center text-lg-start border-top">
+        <div class="text-center p-3 container">
+           © 2021 DailyFlow
+        </div>
+    </footer>
+
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- config navigation -->
+    <script>
+        const navItems =  [
+    {
+      name: 'ホーム',
+      link: '../index.html',
+      isActive: false,
+    },
+    {
+      name: '私について',
+      link: '../pages/porfolio.html',
+      isActve: true,
+    },
+    {
+      name: 'DailyFlowについて',
+      link: '../pages/about.html',
+      isActve: false,
+    },
+];
+    </script>
+    <!-- -->
+    <script src="../js/home.js"></script>
+    <script>document.querySelector('#age').innerText = new Date().getFullYear() - 1999 + "歳";</script>
+</body>
+</html>

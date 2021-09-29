@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+}
+body {
+  background-color: #ecf0f1;
+}
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+h3.heading {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar input {
+  margin: 1rem 10px;
+  height: 30px;
+  width: 50%;
+  padding: 5px;
+  outline: none;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  max-width: 980px;
+}
+.cards .card {
+  width: 300px;
+  max-width: 300px;
+  max-height: 470px;
+  margin: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 7px 6px 26px -17px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.cards .card h3 {
+  font-size: 30px;
+}
+.cards .card p {
+  font-size: 20px;
+  margin: 0;
+}
+.cards .card:nth-child(1) {
+  background-color: #3498db;
+}
+.cards .card:nth-child(2) {
+  background-color: #e74c3c;
+}
+.cards .card:nth-child(3) {
+  background-color: #2ecc71;
+}
+.cards .card:hover {
+  transform: translateY(-4px);
+}
+.cards .card .new-today {
+  text-align: right;
+}
+#country_cards {
+  max-height: 980px;
+  overflow: auto;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
+#country_cards::-webkit-scrollbar {
+  display: none;
+}
+#country_cards {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+#country_cards .card {
+  background: #aaad89;
+  display: flex;
+  flex-direction: column;
+}
+#country_cards .card .country-name {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+#country_cards .card img {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto 2px;
+}
+#footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

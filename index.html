@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link href="./lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/anime-css/animate.min.css"/>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Daily Flow</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand fs-4" href="#">
+                  <img 
+                      class="header-logo"
+                      src="./assets/img/weblogo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <div class="menu-btn">
+                  </div>
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="bg-light">
+        <div id="home">
+            <div class="container" id="description-1">
+                <div class="row">
+                    <div class="col">
+                        <h3  class="header fs-1 fw-bolder">
+                            日々の流れを<br>「DAILY FLOW」で<br>管理しよう。
+                        </h3>
+                        <button onclick="location.href='#features'" class="btn app-description__btn fw-bold shadow mt-5">
+                            使用開始
+                            <span class="app-description__btn-arrow animate__animated animate__flash animate__slower animate__infinite">>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="features">
+            <div class="container">
+                <div class="row">
+                    <p class="features-header col col-12 fs-1 text-center mt-5 mb-5 fw-bold">「DAILY FLOW」の特徴 </p>
+                </div>
+                <ul class="row features-list mb-0 ps-0">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start border-top">
+        <div class="text-center p-3 container">
+           © 2021 DailyFlow
+        </div>
+    </footer>
+
+    <script src="./lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./lib/bootstrap/bootstrap.min.js"></script>
+    <!-- config navigation -->
+    <script>
+        const navItems =  [
+    {
+      name: 'ホーム',
+      link: './index.html',
+      isActive: true,
+    },
+    {
+      name: '私について',
+      link: './pages/porfolio.html',
+      isActve: false,
+    },
+    {
+      name: 'DailyFlowについて',
+      link: './pages/about.html',
+      isActve: false,
+    },
+];
+    </script>
+    <!-- -->
+    <script src="./js/home.js"></script>
+</body>
+</html>

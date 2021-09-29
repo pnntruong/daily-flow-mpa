@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link rel="stylesheet" href="../../lib/anime-css/animate.min.css"/>
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/pomodoro.css">
+    <title>Daily Flow</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand fs-4" href="../../index.html">
+                  <img 
+                      class="header-logo"
+                      src="../../assets/img/weblogo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <div class="menu-btn">
+                  </div>
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="spacer"></div>
+
+    <div class="container" style="max-height:80vh;">
+        <div id="pomodoro">
+            <div id="clock">
+              <div id="timer">
+                <div id="title">Ready?</div>
+                <div id="countdown">
+                  <span id="minutes">30</span>
+                  <span id="seconds">00</span>
+                </div>
+                <div id="controls" class="reset">
+                  <div id="start"><i class="fas fa-play"></i> スタート</div>
+                  <div id="pause"><i class="fas fa-pause"></i> 停止</div>
+                  <div id="reset"><i class="fas fa-sync-alt"></i> リセット</div>
+                </div>
+              </div>
+            </div>
+            <div id="options">
+              <div id="session">
+                <i id="incrSession" class="fas fa-angle-double-up"></i>
+                <span class="option-title">セッション</span>
+                <input id="sessionInput" type="number" value="30" max="60" min="5">
+                <i id="decrSession" class="fas fa-angle-double-down"></i>
+              </div>
+              <div id="break">
+                <i id="incrBreak" class="fas fa-angle-double-up"></i>
+                <span class="option-title">休憩</span>
+                <input id="breakInput" type="number" value="5" max="10" min="1">
+                <i id="decrBreak" class="fas fa-angle-double-down"></i>
+              </div>
+            </div>
+          </div>
+          <div id="audio-selector">
+            <div id="forest" class="theme"><!--🌲 -->Forest</div>
+            <div id="ocean" class="theme"><!--🌊 -->Ocean</div>
+            <div id="rainy" class="selected theme"><!--🌧 -->Rainy</div>
+            <div id="peace" class="theme"><!--🧘 -->Peace</div>
+            <div id="cafe" class="theme"><!--☕ -->Caf&eacute;</div>
+          </div>
+          <audio loop autoplay="false" src="https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/rain.mp3">
+    </div>
+
+    <footer class="bg-light text-center text-lg-start border-top">
+        <div class="text-center p-3 container">
+           © 2021 DailyFlow
+        </div>
+        <p id="note">このページのレイアウトはTIDEというアプリを参考して、制作しました。</p>
+    </footer>
+
+    <script src="../../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- config navigation -->
+    <script>
+        const navItems =  [
+    {
+      name: 'ホーム',
+      link: '../index.html',
+      isActive: false,
+    },
+    {
+      name: '私について',
+      link: '../../pages/porfolio.html',
+      isActve: false,
+    },
+    {
+      name: 'DailyFlowについて',
+      link: '../../pages/about.html',
+      isActve: false,
+    },
+];
+    </script>
+    <!-- -->
+    <script src="../../js/home.js"></script>
+    <script src="../../js/features/pomodoro.js"></script>
+</body>
+</html>

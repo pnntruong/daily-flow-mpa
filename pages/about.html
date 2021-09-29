@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=".././favicon.ico">
+    <link href=".././lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=".././lib/anime-css/animate.min.css"/>
+    <link rel="stylesheet" href=".././css/home.css">
+    <link rel="stylesheet" href=".././css/about.css">
+    <title>Daily Flow</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand fs-4" href="../index.html">
+                  <img 
+                      class="header-logo"
+                      src=".././assets/img/weblogo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <div class="menu-btn">
+                  </div>
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="container-fluid text-center">
+        <h1 class="about-header fs-1 pt-5">Daily-Flowについて</h1>
+        <div class="about-main">
+          <div class="about-features-list">
+              <!-- <div class="item-top">
+                <div class="about-features-list-item">
+                  <span lass="about-features-list-item__text">僕の使命は皆さんの<br>日々の流れの管理を<br>サポートします。</span>
+                </div>
+              </div> -->
+              <div class="about-features-list-item"
+                  style="top: 20%; left: 10%;">
+                <a href="/todos" class="about-features-list-item__text">スケージュール<br>管理</a>
+              </div>
+              <div class="about-features-list-item"
+                    style="top: 20%; right: 10%;">
+                <a href="/pomodoro" class="about-features-list-item__text">集中力<br>サポーター</a>
+              </div>
+              <div class="about-features-list-item"
+                    style="bottom: 20%; left: 15%;">
+                <a href="/comingsoon" class="about-features-list-item__text">コロナウイルス<br>情報</a>
+              </div>
+              <div class="about-features-list-item"
+                    style="bottom: 20%; right: 15%;">
+                <a href="/comingsoon" class="about-features-list-item__text">お金管理</a>
+              </div>
+          </div>
+          <div class="about-main__img">
+            <img src=".././assets/img/fullbody_flat.png"
+                  alt="character-img"
+                  class="main-img">
+          </div>
+        </div>
+      </div>
+
+    <footer class="bg-light text-center text-lg-start border-top">
+        <div class="text-center p-3 container">
+           © 2021 DailyFlow
+        </div>
+    </footer>
+
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- config navigation -->
+    <script>
+        const navItems =  [
+    {
+      name: 'ホーム',
+      link: '../index.html',
+      isActive: false,
+    },
+    {
+      name: '私について',
+      link: '../pages/porfolio.html',
+      isActve: false,
+    },
+    {
+      name: 'DailyFlowについて',
+      link: '../pages/about.html',
+      isActve: true,
+    },
+];
+    </script>
+    <!-- -->
+    <script src="../js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+.dark-mode {
+  --background-color: #000;
+  --text-color: #fff;
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  color: var(--text-color);
+}
+
+#content {
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+#speed-input {
+  margin-bottom: 10px;
+}
+.main-show {
+  padding: 5px;
+  position: relative;
+}
+.current-speed {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+textarea {
+  font-size: 1rem;
+  width: 80vw;
+  height: 60vh;
+}
+
+.control {
+  margin-top: 2rem;
+}
+.app-main {
+  height: 90vh;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  margin: .5rem;
+  background-color: rgb(245, 244, 244);
+}
+
+.btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+}

@@ -1,0 +1,115 @@
+.spacer {
+  margin: 100px 0;
+}
+.navbar {
+  width: 100%;
+}
+.header-logo {
+  height: 40px;
+  min-width: 200px;
+  max-width: 250px;
+  width: 20vw;
+}
+.menu-btn {
+  --size: 40px;
+  --animate-duration: 0.5s;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 20px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.menu-btn::before {
+  content: "";
+  background-color: #000;
+  width: calc(var(--size) / 2);
+  height: 2px;
+  box-shadow: 0 calc(var(--size) / -7) 0 #000;
+  transition: var(--animate-duration);
+}
+.menu-btn::after {
+  content: "";
+  background-color: #000;
+  width: calc(var(--size) / 2);
+  height: 2px;
+  box-shadow: 0 calc(var(--size) / 7) 0 #000;
+  margin-top: -2px;
+  transition: var(--animate-duration);
+}
+.active.menu-btn::after {
+  transition: var(--animate-duration);
+  transform: rotate(-45deg);
+  box-shadow: unset;
+}
+.active.menu-btn::before {
+  transition: var(--animate-duration);
+  transform: rotate(45deg);
+  box-shadow: unset;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+#home {
+  background-image: url(".././assets/background/bg-1.jpg");
+  height: 100vh;
+  background-position-x: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#home > .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.app-description__btn {
+  box-shadow: 0 0 5px 0 #ccc;
+  margin-left: 10px;
+  background-color: #fff;
+}
+
+.card {
+  border: none;
+  text-decoration: none;
+}
+.features-list {
+  list-style: none;
+}
+.feature-item__img {
+  width: 100px;
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 #ccc;
+    padding: 10px;
+  }
+}
+@media (max-width: 345px) {
+  .features-header {
+    font-size: calc(1rem + 1.5vw) !important;
+  }
+  .feature-item__description {
+    font-size: calc(0.6rem + 1.5vw);
+  }
+}

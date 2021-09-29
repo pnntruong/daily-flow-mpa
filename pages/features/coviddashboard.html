@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/anime-css/animate.min.css"/>
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/coviddashboard.css">
+    <title>Daily Flow</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand fs-4" href="../../index.html">
+                  <img 
+                      class="header-logo"
+                      src="../../assets/img/weblogo.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <div class="menu-btn">
+                  </div>
+                </span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="align-items: center;">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="spacer"></div>
+    <div class="container mt-5">
+        <h1 class="mt-5">コロナウイルス情報</h1>
+        <h3 class="heading">世界中の感染状況</h3>
+        <div class="cards">
+        <div class="card">
+            <h3 id="cases">--</h3>
+            <p>感染者数</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-cases">--</span>
+            <span>今日</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 id="deaths">--</h3>
+            <p>死者数</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-deaths">--</span>
+            <span>今日</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 id="recovered">--</h3>
+            <p>回復者数</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-recovered">--</span>
+            <span>今日</span>
+            </div>
+        </div>
+        </div>
+        <div class="world-map"></div>
+        <h3 class="heading">各国の感染状況</h3>
+        <div class="search-bar">
+        <span id="search-icon">🔍</span>
+        <input id="country" placeholder="Country name ..." autocomplete="off">
+        </input>
+        <!--   <select id="country-select">
+            
+        </select> -->
+        </div>
+        <div id="country_cards" class="cards">
+        <div class="card">
+            <h2 class="country-name">Country Name</h2>
+            <h3 id="cases">--</h3>
+            <p>Total Cases</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-cases">--</span>
+            <span>today</span>
+            </div>
+            <h3 id="deaths">--</h3>
+            <p>Total Deaths</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-deaths">--</span>
+            <span>today</span>
+            </div>
+            <h3 id="recovered">--</h3>
+            <p>Total Recovered</p>
+            <div class="new-today">
+            <span> + </span>
+            <span id="new-recovered">--</span>
+            <span>today</span>
+            </div>
+        </div>
+        </div>
+        <div id="footer">
+        <div class="info">使っているAPIは<a href="https://documenter.getpostman.com/view/11144369/Szf6Z9B3?version=latest" target="_blank">こちら</a> です。</div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start border-top">
+        <div class="text-center p-3 container">
+           © 2021 DailyFlow
+        </div>
+    </footer>
+
+    <script src="../../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- config navigation -->
+    <script>
+        const navItems =  [
+    {
+      name: 'ホーム',
+      link: '../index.html',
+      isActive: false,
+    },
+    {
+      name: '私について',
+      link: '../../pages/porfolio.html',
+      isActve: false,
+    },
+    {
+      name: 'DailyFlowについて',
+      link: '../../pages/about.html',
+      isActve: false,
+    },
+];
+    </script>
+    <!-- -->
+    <script src="../../js/home.js"></script>
+    <script src="../../js/features/coviddashboard.js"></script>
+</body>
+</html>
