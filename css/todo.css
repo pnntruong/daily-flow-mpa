@@ -150,3 +150,9 @@ input[type="text"] {
   background-color: #000;
   color: #fff;
 }
+.do-todo{
+  border: 1px solid #ccc;
+}
+.do-todo:hover{
+  box-shadow: 0 0 10px 0 #ccc;
+}

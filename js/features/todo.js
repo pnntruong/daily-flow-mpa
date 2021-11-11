@@ -21,6 +21,7 @@ function renderTodo(todo) {
     <input id="${todo.id}" type="checkbox"/>
     <label for="${todo.id}" class="tick js-tick"></label>
     <span>${todo.text}</span>
+    <button class="do-todo js-do-todo btn">やる</button>
     <button class="delete-todo js-delete-todo">
     <i class="fas fa-trash-alt"></i>
     </button>
@@ -58,9 +59,19 @@ function deleteTodo(key) {
     deleted: true,
     ...todoItems[index]
   }
-  todo.deleted = true
+  todo.deleted = true;
+  localStorage.removeItem('doingTask');
   todoItems = todoItems.filter(item => item.id !== Number(key));
   renderTodo(todo);
+}
+
+function doTodo(key) {
+  const index = todoItems.findIndex(item => item.id === Number(key));
+  const todo = {
+    ...todoItems[index]
+  }
+  localStorage.setItem('doingTask', JSON.stringify(todo));
+  window.location.href = "./pomodoro.html";
 }
 
 const form = document.querySelector('.js-form');
@@ -86,6 +97,11 @@ list.addEventListener('click', event => {
   if (event.target.classList.contains('js-delete-todo')) {
     const itemKey = event.target.parentElement.dataset.key;
     deleteTodo(itemKey);
+  }
+
+  if (event.target.classList.contains('js-do-todo')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    doTodo(itemKey);
   }
 });
 

@@ -3,6 +3,7 @@ $(() => {
     let $audio = $("audio"),
         $theme = $(".theme"),
         $title = $("#title"),
+        $doingTaskTitle = $('.doing-task__title'),
         $controls = $("#controls"),
         $options = $("#options"),
         $minutes = $("#minutes"),
@@ -30,6 +31,7 @@ $(() => {
     init();
   
     function init(){
+      $doingTaskTitle.text(JSON.parse(localStorage.doingTask).text);
       $audio.prop("volume", 0);
       $incrSession.click(() => incrSession());
       $decrSession.click(() => decrSession());

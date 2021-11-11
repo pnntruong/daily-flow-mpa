@@ -23,7 +23,7 @@ footer{
 #pomodoro {
     max-width: 512px;
     width: 100%;
-    margin: 0 auto 25vh;
+    margin: -5vh auto 25vh;
 }
 #pomodoro #clock {
     background: url(../assets/img/pomodoro_clock.png) no-repeat center center;
@@ -288,4 +288,17 @@ audio {
 }
 #note{
     font-size: 12px;
+}
+.doing-task{
+    color: #fa4343;
+}
+.tasklist-link{
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.tasklist-link:hover{
+    color: inherit;
+    text-decoration: underline;
 }
