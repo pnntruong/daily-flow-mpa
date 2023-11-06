@@ -31,7 +31,8 @@ $(() => {
     init();
   
     function init(){
-      $doingTaskTitle.text(JSON.parse(localStorage.doingTask).text ?? "None");
+      let doingTask = (localStorage.doingTask != undefined) ? JSON.parse(localStorage.doingTask).text : "None";
+      $doingTaskTitle.text(doingTask);
       $audio.prop("volume", 0);
       $incrSession.click(() => incrSession());
       $decrSession.click(() => decrSession());
